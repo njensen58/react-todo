@@ -1,0 +1,123 @@
+/* GLOBAL STYLE SETTINGS */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input  {
+    outline: none;
+}
+
+/*----------------------------------*/
+        /* ADD TODO FORM */
+/*----------------------------------*/
+
+form.add-todo-form {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #3339;
+}
+
+form.add-todo-form > input {
+    padding: 10px 5px;
+    width: 100px;
+    margin: 0 5px;
+    border-radius: 5px;
+    border: 1px solid #8889;
+}
+
+form.add-todo-form > button {
+    background-color: white;
+    border: 1px solid #8889;
+    padding: 3px 4px;
+    border-radius: 5px;
+}
+
+
+/*----------------------------------*/
+         /* EDIT TODO FORM */
+/*----------------------------------*/
+
+form.edit-form {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #3339;
+    width: 50%;
+    height: 100px;
+    left: 25%;
+}
+
+form.edit-form > input {
+    width: 100px;
+}
+
+form.edit-form > button {
+    background-color: #2c3e50;
+    color: #eee;
+    font-size: 9px;
+    padding: 1px;
+    border-radius: 6px;
+}
+
+
+
+/*----------------------------------*/
+         /* LIST CONTAINER */
+/*----------------------------------*/
+
+div.list-container {
+    margin: 0 20%;
+}
+
+
+
+
+
+/*----------------------------------*/
+            /*  TODO  */
+/*----------------------------------*/
+
+div.todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+    padding: 3px;
+    border-radius: 2px;
+    border: 1px solid #8889;
+}
+
+.todo > h1 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.todo-toggle > button:nth-child(1){
+    background-color: #3498db;
+    color: #eee;
+    font-size: 9px;
+}
+
+.todo-toggle > button:nth-child(2){
+    background-color: #c0392b;
+    color: #eee;
+    font-size: 9px;
+}
