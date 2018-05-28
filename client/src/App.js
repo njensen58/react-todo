@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Switch, Route } from 'react-router-dom'
 import SignupLoginPage from './components/SignupLoginPage'
 import TodoListContainer from './components/TodoListContainer'
 
@@ -8,12 +9,16 @@ import TodoListContainer from './components/TodoListContainer'
 
 
 const App = (props) => {
-    let auth = props.user.isAuthenticated
+    let authenticated = props.user.isAuthenticated
     return (
         <div>
-            { !auth
+            { !authenticated
                 ? <SignupLoginPage />
-                : <TodoListContainer />
+                : <React.Fragment>
+                      <Switch>
+                          <Route path="/" component={ TodoListContainer }/>
+                      </Switch>
+                  </React.Fragment>
             }
         </div>
     )

@@ -3,7 +3,7 @@ import List from '../shared/List'
 import Form from '../shared/Form'
 import Loading from '../shared/Loading'
 import Todo from './Todo'
-import AddTodoForm from './AddTodoForm'
+import AddEditTodoForm from './AddEditTodoForm'
 import { connect } from 'react-redux'
 import { logout } from '../redux/auth'
 import { getTodos, addTodo, deleteTodo, editTodo } from '../redux/todos'
@@ -21,12 +21,12 @@ class TodoListContainer extends Component {
                 <Form
                     reset
                     inputs={{ title: '', description: '' }}
-                    render={ props => ( <AddTodoForm { ...props }/>)}
+                    render={ props => ( <AddEditTodoForm { ...props }/>)}
                     submit={ inputs => addTodo( inputs ) }
                 />
                 <button onClick={ this.props.logout }>Logout</button>
                 <List
-                    data={ todos.todos }
+                    data={ todos }
                     onDelete={ id => deleteTodo( id ) }
                     onEdit={ editTodo }
                     className="list-container"

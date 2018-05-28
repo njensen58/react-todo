@@ -53,7 +53,7 @@ export const signUp = credentials => {
         })
         .catch(err => {
             console.log(err)
-            dispatch(handleAuthErr("signup", err.response.status))
+            dispatch( handleAuthErr("signup", err.response.status) )
         })
     }
 }
@@ -69,7 +69,7 @@ export const signIn = credentials => {
         })
         .catch(err => {
             console.error(err)
-            dispatch(handleAuthErr("signin", err.response.status))
+            dispatch( handleAuthErr("signin", err.response.status) )
         })
     }
 }

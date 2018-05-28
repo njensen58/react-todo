@@ -1,7 +1,7 @@
 import React from 'react'
 import Toggle from '../shared/Toggle'
 import Form from '../shared/Form'
-import EditForm from './EditForm'
+import AddEditTodoForm from './AddEditTodoForm'
 
 
 
@@ -18,8 +18,8 @@ const Todo = props => {
                         <Form
                             reset
                             inputs={{ title: '', description: '' }}
-                            edit={ props => onEdit( _id, props )}
-                            render={ props => (<EditForm { ...props }/>) }
+                            submit={ props => onEdit( _id, props )}
+                            render={ props => (<AddEditTodoForm { ...props }/>) }
                         />
                     }
                 </div>

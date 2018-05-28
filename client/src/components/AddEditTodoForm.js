@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AddTodoForm = (props) => {
+const AddEditTodoForm = (props) => {
     const { handleChange, inputs, handleSubmit } = props;
     return (
         <form onSubmit={ handleSubmit } className="add-todo-form">
@@ -23,4 +23,4 @@ const AddTodoForm = (props) => {
     )
 }
 
-export default AddTodoForm;
+export default AddEditTodoForm;

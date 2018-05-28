@@ -1,5 +1,5 @@
 import React from 'react';
-import AuthForm from './auth/AuthForm'
+import AuthForm from './AuthForm'
 import Form from '../shared/Form'
 import Toggle from '../shared/Toggle'
 import { connect } from 'react-redux'

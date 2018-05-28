@@ -13,7 +13,6 @@ todoAxios.interceptors.request.use(config => {
 
 
 
-
 const setTodos = todos => {
     return {
         type: "SET_TODOS",
@@ -71,9 +70,7 @@ const initialTodos = [];
 const todosReducer = (todos = initialTodos, action) => {
     switch(action.type){
         case "SET_TODOS":
-            return {
-                todos: action.todos
-            }
+            return [...action.todos]
         default:
             return todos
     }
