@@ -54,6 +54,7 @@ export const deleteTodo = id => {
 }
 
 export const editTodo = (id, todo) => {
+    console.log(id, todo)
     return dispatch => {
         todoAxios.put(todoUrl + id, todo).then(res => {
             dispatch(getTodos())

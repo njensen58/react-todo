@@ -8,7 +8,6 @@ class Form extends Component {
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
-        this.handleEdit   = this.handleEdit.bind(this)
     }
 
     handleChange(e){
@@ -27,18 +26,10 @@ class Form extends Component {
         this.props.reset && this.setState({ inputs: this.props.inputs })
     }
 
-    handleEdit(e){
-        e.preventDefault()
-        const { inputs } = this.state;
-        this.props.edit( inputs )
-        this.props.reset && this.setState({ inputs: this.props.inputs })
-    }
-
     render(){
         return this.props.render({
             handleSubmit: this.handleSubmit,
             handleChange: this.handleChange,
-            handleEdit: this.handleEdit,
             inputs: this.state.inputs
         })
     }
